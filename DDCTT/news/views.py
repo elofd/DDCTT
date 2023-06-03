@@ -1,3 +1,6 @@
+"""
+Views for news app
+"""
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from .models import News
@@ -6,7 +9,7 @@ from .serializers import NewsSerializer
 
 class NewsListCreateView(ListCreateAPIView):
     """
-    Просматривае создаём экземпляры модели News
+    class NewsListCreateViews for News model
     """
     queryset = News.objects.select_related('author').all()
     serializer_class = NewsSerializer
@@ -14,7 +17,7 @@ class NewsListCreateView(ListCreateAPIView):
 
 class NewsUpdateDeleteView(RetrieveUpdateDestroyAPIView):
     """
-    Изменяем удаляем экземпляры модели News
+    class NewsUpdateDeleteView for News model
     """
     queryset = News.objects.select_related('author').all()
     serializer_class = NewsSerializer

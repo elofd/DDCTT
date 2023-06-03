@@ -1,3 +1,6 @@
+"""
+Urls for news app
+"""
 from django.urls import path
 
 from .views import NewsListCreateView, NewsUpdateDeleteView

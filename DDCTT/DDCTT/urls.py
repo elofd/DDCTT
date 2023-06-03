@@ -9,8 +9,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('news/', include('news.urls')),
-    path('places/', include('places.urls')),
+    path('api/news/', include('news.urls')),
+    path('api/places/', include('places.urls')),
 ]
 
 if settings.DEBUG:
